@@ -5,7 +5,14 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
+body{
+    font-family:'Lato', sans-serif;
+}
 
+@font-face {
+    font-family: myFont1;
+    src: url("../font/OpenSans-Italic-VariableFont_wdth\,wght.ttf");
+}
 
 /*** Spinner ***/
 .spinner {
