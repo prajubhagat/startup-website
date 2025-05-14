@@ -155,6 +155,7 @@ h6,
     border-color: var(--primary) !important;
 }
 
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
         position: relative;
@@ -171,9 +172,25 @@ h6,
     .navbar-dark .navbar-brand h1 {
         color: var(--primary);
     }
+   .logo {
+        width: 160px;
+        height: 50px;
+        background-image: url("img/companyLogoW.png");
+        background-size: contain;
+        background-repeat: no-repeat; 
+        display:block;      
+  }
 }
 
 @media (min-width: 992px) {
+   .logo {
+        width: 160px;
+        height: 50px;
+        display:block;
+        background-image: url("img/companyLogoB.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
     .navbar-dark {
         position: absolute;
         width: 100%;
