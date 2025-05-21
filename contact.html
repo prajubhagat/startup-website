@@ -178,22 +178,22 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form>
+                    <form action="contact_process.php" method="post" id="contactForm">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4" name="name" id="name" placeholder="Your Name" style="height: 55px;">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control border-0 bg-light px-4" name="email" id="email" placeholder="Your Email" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4"  name="subject" id="subject" placeholder="Subject" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
+                                <textarea class="form-control border-0 bg-light px-4 py-3" name="message" id="message" rows="4" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit" onclick="submitForm()">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -337,6 +337,29 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function submitForm() {
+            var form = $('#contactForm');
+            console.log("test data");
+            if (form[0].checkValidity()) {  // Check if the form is valid
+                $.ajax({
+                    url: 'contact_process.php',  // Ensure this PHP file exists and handles the form data
+                    method: 'POST',
+                    data: form.serialize(),  // Serialize form data to send
+                    success: function(response) {
+                        // Display response from PHP
+                        alert('Message sent successfully!');
+                        console.log(response);  // You can log the response for debugging
+                    },
+                    error: function() {
+                        alert("There was an error submitting the form. Please try again.");
+                    }
+                });
+            } else {
+                form[0].reportValidity();  // Show HTML5 validation error messages if form is invalid
+            }
+        }
+    </script>
 </body>
 
 </html>
