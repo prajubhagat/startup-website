@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #a69581 ;
+    --primary: #a88c70 ;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
@@ -69,13 +69,13 @@ body{
 h1,
 h2,
 .fw-bold {
-    font-weight: 800 !important;
+    font-weight: 700 !important;
 }
 
 h3,
 h4,
 .fw-semi-bold {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 h5,
@@ -87,8 +87,8 @@ h6,
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+    font-family: "Lato",sans-serif;
+    font-weight: 500;
     transition: .5s;
 }
 
@@ -132,21 +132,21 @@ h6,
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Lato",sans-serif;
     position: relative;
     margin-left: 25px;
     padding: 20px 0;
     color:#000;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bold;
     outline: none;
     transition: .5s;
 }
 
-.sticky-top.navbar-dark .navbar-nav .nav-link {
+/* .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 0;
     color:#000;
-}
+} */
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
@@ -158,28 +158,27 @@ h6,
 }
 
 .navbar-dark .navbar-toggler {
-    color: var(--primary) !important;
-    border-color: var(--primary) !important;
+    color:#000 !important;
+    border-color: #000 !important;
 }
 
 
-@media (max-width: 991.98px) {
-    .sticky-top.navbar-dark {
+    /* .sticky-top.navbar-dark {
         position: relative;
-        background: #a69581;
-    }
+        background: #a88c70;
+    } */
 
-    .navbar-dark .navbar-nav .nav-link,
+    /* .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .nav-link.show,
     .sticky-top.navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;
         color: var(--dark);
-    }
+    } */
 
     .navbar-dark .navbar-brand h1 {
         color: var(--primary);
     }
-   .logo {
+   /* .logo {
         width: 160px;
         height: 50px;
         background-image: url("img/companyLogoW.png");
@@ -187,9 +186,8 @@ h6,
         background-repeat: no-repeat; 
         display:block;      
   }
-}
 
-@media (min-width: 992px) {
+
    .logo {
         width: 160px;
         height: 50px;
@@ -197,10 +195,10 @@ h6,
         background-image: url("img/companyLogoB.png");
         background-size: contain;
         background-repeat: no-repeat;
-    }
+    } */
     .navbar-dark {
-        /* position: absolute; */
-        background: #a69581;
+        position: fixed;
+        background: #a88c70;
         width: 100%;
         top: 0;
         left: 0;
@@ -210,7 +208,7 @@ h6,
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: #a69581;
+        background: #a88c70;
     }
 
     .navbar-dark .navbar-nav .nav-link::before {
@@ -237,7 +235,7 @@ h6,
     .sticky-top.navbar-dark .navbar-brand h1 {
         color: var(--primary);
     }
-}
+
 
 
 /*** Carousel ***/
@@ -246,7 +244,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(9, 30, 62, .7);
+    background: #29252596;
     z-index: 1;
 }
 
@@ -442,7 +440,7 @@ h6,
 }
 
 .team-item:hover .team-social {
-    background: rgba(9, 30, 62, .7);
+    background: #29252596;
 }
 
 .team-item:hover .team-social a.btn:first-child {
@@ -498,7 +496,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(#a17b5470, #a88c7057), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
