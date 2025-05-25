@@ -239,7 +239,7 @@ h6,
 
 /*** Carousel ***/
 .carousel-caption {
-    top: 0;
+    top: 80px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -250,12 +250,12 @@ h6,
 @media (max-width: 576px) {
     .carousel-caption h5 {
         font-size: 14px;
-        font-weight: 500 !important;
+        font-weight: 400 !important;
     }
 
     .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 600 !important;
+        font-size: 28px;
+        font-weight: 500 !important;
     }
 }
 
