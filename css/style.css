@@ -136,7 +136,7 @@ h6,
     position: relative;
     margin-left: 25px;
     padding: 20px 0;
-    color:#000;
+    color: #282525;
     font-size: 1rem;
     outline: none;
     transition: .5s;
@@ -243,7 +243,8 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: #29252596;
+    /*background: #29252596;*/
+    background: #29252500
     z-index: 1;
 }
 
@@ -511,4 +512,9 @@ h6,
     .footer-about {
         margin-bottom: -75px;
     }
+}
+
+.text-shadow {
+    color: #000000 !important;
+    text-shadow: 4px 0px 8px #fff;
 }
