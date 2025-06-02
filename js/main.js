@@ -124,3 +124,47 @@
     
 })(jQuery);
 
+function includeHTML(id, url) {
+  return fetch(url)                // Return the promise!
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(id).innerHTML = data;
+    });
+}
+
+function setActiveNav() {
+  let path = window.location.pathname;
+  let page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+
+  const navLinks = document.querySelectorAll('.navbar-nav > a.nav-link');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === page) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
+  dropdownItems.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === page) {
+      link.classList.add('active');
+      const dropdown = link.closest('.nav-item.dropdown');
+      if (dropdown) {
+        dropdown.querySelector('.nav-link.dropdown-toggle').classList.add('active');
+      }
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.onload = function() {
+  includeHTML('webHeader', 'common-components/header.html')
+    .then(() => {
+      setActiveNav();         
+      return includeHTML('webFooter', 'common-components/footer.html'); 
+    });
+}
